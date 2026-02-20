@@ -94,19 +94,108 @@ profession = "Js developer"; */
 // В devtools покажет ошибку.
 
 // С var такого не произойдет. var имеет глобальную область видимомти. Пример:
-{
-  let userName = "Bob";
-  //   console.log(userName);
+// {
+//   let userName = "Bob";
+//   //   console.log(userName);
 
-  var someNumber = 10;
-  console.log(someNumber);
-}
+//   var someNumber = 10;
+//   console.log(someNumber);
+// }
 
-// console.log(userName);
-console.log(someNumber);
+// // console.log(userName);
+// console.log(someNumber);
 
 // var выведется и в блоке кода и за его пределами.
 
 // По умолчанию используем const, когда понимаем что она значение не меняет.
-Когда явно понятно, что переменная будет менять свое значение, тогда используем let/
+// Когда явно понятно, что переменная будет менять свое значение, тогда используем let
 
+// -------------------2.2 Типы данных----------------------
+// let userName = "Марк";
+// Строка (текст) (Одно слово, фраза, предложение абзац, хоть целая книга)
+
+// let age = 30;
+// Число
+
+// console.log(30);
+// console.log("30");
+
+// let isMarried = true;
+// Логическое значение true/false
+
+// Динамическая типизация
+// let someVariable = "Some value";
+// Сейчас someVariable типа Sting
+// someVariable = 50;
+// Сейчас someVariable типа Number
+// someVariable = true;
+// Сейчас someVariable типа Boolean
+
+// Плохой пример нейминга
+// let u = "Bob";
+// console.log(u);
+
+// Хороший пример нейминга
+// let userName = "James";
+// console.log(userName);
+
+// Значение null - означает "ничего", "пусто", или "значение неизвестно"
+// let age = null;
+// Пример:
+// let age = 32;
+// age = null; - обнуляем значение ( в данном случае 32)
+
+// Значение undefined - означает что "значение не было происвоено или оно не определенно"
+// Если переменная объявлена, но ей не присвоено никакого значения, то ее значением будет undefined
+// let newVariable; // будет undefined
+// let userName; //undefined
+// console.log(userName);
+
+// Если мы хотим обнулить перемную
+// let someName = "James";
+// someName = undefined; //Так не делают
+// someName = null; //Делают так
+
+// Объекты
+// Массивы
+
+// Оператор typeof
+// const someName = "Bod";
+// console.log(typeof someName); //В девтулс увидим string - строка, потому что Боб это строка.
+
+// const someName = 33;
+// console.log(typeof someName); //В девтулс увидим number потому что 33 это число.
+
+// const someName = true;
+// console.log(typeof someName); //В девтулс увидим boolean потому что true это логический тип значения.
+
+// BigInt -тоже тип значения - это встроенный объект, который позволяет нам создавать большиие числа.
+// Максимальное число, которое мы можем использовать в Js типа number мы можем получить обратившись к объекту типа number и его св-ву MAX_SAFE_INTEGER.
+
+// console.log(Number.MAX_SAFE_INTEGER);
+// Devlools выведет максимальное целое число  9007199254740991
+
+// А если мы будем работать с этим числом и делать что -то больше, чем это число, то не сработает.
+// И в таком случае нам нужен BigInt.Вконце числа нужно просто дописать n и тогда код сработает.
+//  Пример:
+
+// console.log(90071992547409943534563654645n);
+
+// Symbol
+
+// Используется для того, что бы создать уникальные значения, для идентификаторов для имен св-в в объектах.
+// Символ - это уникальное примитивное значение.
+// Позволяет добавить уникальное св-во к объекту, с уверенностью что он не перезапишет никакое др св-во.
+
+// Итого типы данных,которые есть в Js:
+
+// Числа number
+// Строки String
+// Булевой тип данных Boolean
+// null
+// undefined
+// Объекты Object
+// Массивы
+
+// Symbol
+// BigInt
