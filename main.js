@@ -439,13 +439,29 @@ sayHi();
 
 // Также мы можем передавать функцию, как аргумент в др функции. Например мы можем сразу в консоль лог передать не переменную, а ФУНКЦИЮ.  Пример:
 
-function summ(a, b) {
-  return a + b;
-}
+// function summ(a, b) {
+//   return a + b;
+// }
 
 // console.log(summ(10, 15)); // передали функцию с аргументами 10 и 15.
 
 // А теперь пример посложнее.
 // Запустим функцию summ и передадим в нее 2 аргумента.
-const result = summ(summ(15, 15), summ(20, 20));
-console.log(result);
+// const result = summ(summ(15, 15), summ(20, 20));
+// console.log(result);
+
+// Еще один более сложный аргумент, когда функцию мы можем передать в качестве аргумента в др функцию и она будет запущена в др функции. Пример:
+
+function summ(a, b) {
+  return a + b;
+}
+
+function doSomething(func) {
+  // и функция doSomething будет принимать в качестве аргумента функцию.
+  let x = 10; // внутри у нее свои внутренние переменные.
+  let y = 15;
+  let result = func(x, y);
+  console.log(result);
+}
+
+doSomething(summ); // Запускаю функцию doSomething мы передаем в нее summ. Это называется функция callback
